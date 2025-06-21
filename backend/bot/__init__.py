@@ -11,7 +11,7 @@ bot = Bot(token=f"{os.getenv('BOT_TOKEN')}", default=DefaultBotProperties(parse_
 async def start(message: Message):
   markup = InlineKeyboardMarkup(
     inline_keyboard=[
-      [InlineKeyboardButton(text="Открыть", web_app=WebAppInfo(url="https://a86a-185-139-138-106.ngrok-free.app"))]
+      [InlineKeyboardButton(text="Открыть", web_app=WebAppInfo(url="https://ecodemo.elasticspace.app"))]
     ]
   )
   await message.answer("Сделаем планету зеленее!", reply_markup=markup)

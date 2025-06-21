@@ -3,7 +3,7 @@ import ChecksAPI from "./checks";
 import JobsAPI from "./jobs";
 import TasksAPI from "./tasks";
 
-const baseUrl = "https://99d3-185-139-138-106.ngrok-free.app/api";
+const baseUrl = "https://ecoapi.elasticspace.app/api";
 
 export const api = {
   auth: AuthAPI(baseUrl),
