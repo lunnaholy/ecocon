@@ -13,8 +13,6 @@ services:
       - BOT_TOKEN=$BOT_TOKEN
       - POCKETBASE_EMAIL=$POCKETBASE_EMAIL
       - POCKETBASE_PASSWORD=$POCKETBASE_PASSWORD
-    depends_on:
-      - pocketbase
   app:
     build: ./miniapp
     restart: always
