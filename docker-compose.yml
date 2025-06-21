@@ -1,0 +1,22 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      args:
+        - HTTP_HOST=$HTTP_HOST
+        - HTTP_PORT=$HTTP_PORT
+    restart: always
+    environment:
+      - BOT_ENABLED=$BOT_ENABLED
+      - POCKETBASE_URL=$POCKETBASE_URL
+      - JWT_SECRET=$JWT_SECRET
+      - BOT_TOKEN=$BOT_TOKEN
+      - POCKETBASE_EMAIL=$POCKETBASE_EMAIL
+      - POCKETBASE_PASSWORD=$POCKETBASE_PASSWORD
+    depends_on:
+      - pocketbase
+  app:
+    build: ./miniapp
+    restart: always
+    depends_on:
+      - backend

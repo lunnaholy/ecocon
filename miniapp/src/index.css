@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+body {
+  background: var(--tg-theme-secondary-bg-color, white);
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --background: var(--tg-theme-bg-color, #d4d4cc);
+  --foreground: var(--tg-theme-text-color, #212121);
+  --card: var(--tg-theme-section-bg-color, #d4d4cc);
+  --card-foreground: var(--tg-theme-section-header-text-color, #514e6b);
+  --popover: var(--tg-theme-section-bg-color, #d4d4cc);
+  --popover-foreground: var(--tg-theme-section-header-text-color, #514e6b);
+  --primary: var(--tg-theme-button-color, #514e6b);
+  --primary-foreground: var(--tg-theme-button-text-color, #ffffff);
+  --secondary: var(--tg-theme-secondary-bg-color, #c8c8be);
+  --secondary-foreground: var(--tg-theme-subtitle-text-color, #72726e);
+  --muted: var(--tg-theme-secondary-bg-color, #c8c8be);
+  --muted-foreground: var(--tg-theme-subtitle-text-color, #72726e);
+  --accent: var(--tg-theme-secondary-bg-color, #c8c8be);
+  --accent-foreground: var(--tg-theme-subtitle-text-color, #72726e);
+  --destructive: var(--tg-theme-destructive-text-color, #a8132d);
+  --destructive-foreground: var(--tg-theme-destructive-text-color, #a8132d);
+  --border: var(--tg-theme-section-separator-color, #c2c2bb);
+  --input: var(--tg-theme-section-separator-color, #c2c2bb);
+  --ring: var(--tg-theme-link-color, #514e6b);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.65rem;
+  --sidebar: var(--tg-theme-bottom-bar-bg-color, #d4d4cc);
+  --sidebar-foreground: var(--tg-theme-text-color, #212121);
+  --sidebar-primary: var(--tg-theme-button-color, #514e6b);
+  --sidebar-primary-foreground: var(--tg-theme-button-text-color, #ffffff);
+  --sidebar-accent: var(--tg-theme-secondary-bg-color, #c8c8be);
+  --sidebar-accent-foreground: var(--tg-theme-subtitle-text-color, #72726e);
+  --sidebar-border: var(--tg-theme-section-separator-color, #c2c2bb);
+  --sidebar-ring: var(--tg-theme-link-color, #514e6b);
+}
+
+.dark {
+  --background: var(--tg-theme-bg-color, #212121);
+  --foreground: var(--tg-theme-text-color, #ffffff);
+  --card: var(--tg-theme-section-bg-color, #2a2a2a);
+  --card-foreground: var(--tg-theme-section-header-text-color, #d4d4cc);
+  --popover: var(--tg-theme-section-bg-color, #2a2a2a);
+  --popover-foreground: var(--tg-theme-section-header-text-color, #d4d4cc);
+  --primary: var(--tg-theme-button-color, #514e6b);
+  --primary-foreground: var(--tg-theme-button-text-color, #ffffff);
+  --secondary: var(--tg-theme-secondary-bg-color, #383838);
+  --secondary-foreground: var(--tg-theme-subtitle-text-color, #b0b0b0);
+  --muted: var(--tg-theme-secondary-bg-color, #383838);
+  --muted-foreground: var(--tg-theme-subtitle-text-color, #b0b0b0);
+  --accent: var(--tg-theme-secondary-bg-color, #383838);
+  --accent-foreground: var(--tg-theme-subtitle-text-color, #b0b0b0);
+  --destructive: var(--tg-theme-destructive-text-color, #a8132d);
+  --destructive-foreground: var(--tg-theme-destructive-text-color, #ff6b6b);
+  --border: var(--tg-theme-section-separator-color, #444);
+  --input: var(--tg-theme-section-separator-color, #444);
+  --ring: var(--tg-theme-link-color, #8a8a8a);
+  --sidebar: var(--tg-theme-bottom-bar-bg-color, #2a2a2a);
+  --sidebar-foreground: var(--tg-theme-text-color, #ffffff);
+  --sidebar-primary: var(--tg-theme-button-color, #514e6b);
+  --sidebar-primary-foreground: var(--tg-theme-button-text-color, #ffffff);
+  --sidebar-accent: var(--tg-theme-secondary-bg-color, #383838);
+  --sidebar-accent-foreground: var(--tg-theme-subtitle-text-color, #b0b0b0);
+  --sidebar-border: var(--tg-theme-section-separator-color, #444);
+  --sidebar-ring: var(--tg-theme-link-color, #8a8a8a);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
